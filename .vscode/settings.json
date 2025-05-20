@@ -1,0 +1,9 @@
+{
+    "python.testing.pytestArgs": [
+        "scripts",
+        "--pciaddr=0000:00:02.0"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "terminal.integrated.shellArgs.linux": ["sudo"]
+}

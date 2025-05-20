@@ -1,0 +1,458 @@
+make[1]: Entering directory '/home/jj/.local/pynvme'
+sudo ./src/setup.sh status
+Hugepages
+node     hugesize     free /  total
+node0   1048576kB        0 /      0
+node0      2048kB     1215 /   1215
+
+NVMe devices
+BDF		Vendor	Device	NUMA	Driver		Device name
+0000:00:02.0	1b36	0010	-1	uio_pci_generic		-
+0000:00:03.0	1b36	0010	-1	uio_pci_generic		-
+
+I/OAT DMA
+BDF		Vendor	Device	NUMA	Driver
+
+virtio
+BDF		Vendor	Device	NUMA	Driver		Device name
+0000:09:01.0	1af4	1004	-1		virtio-pci		 sda
+VMD
+BDF		Numa Node	Driver Name
+sudo cat /proc/meminfo
+MemTotal:        8091752 kB
+MemFree:          429876 kB
+MemAvailable:    1613612 kB
+Buffers:           61752 kB
+Cached:          1462724 kB
+SwapCached:          524 kB
+Active:          2422424 kB
+Inactive:        2192120 kB
+Active(anon):    1999520 kB
+Inactive(anon):  1300336 kB
+Active(file):     422904 kB
+Inactive(file):   891784 kB
+Unevictable:        4732 kB
+Mlocked:            4732 kB
+SwapTotal:       4194300 kB
+SwapFree:        4190692 kB
+Zswap:                 0 kB
+Zswapped:              0 kB
+Dirty:               344 kB
+Writeback:             0 kB
+AnonPages:       3094232 kB
+Mapped:           620288 kB
+Shmem:            209808 kB
+KReclaimable:     170520 kB
+Slab:             368752 kB
+SReclaimable:     170520 kB
+SUnreclaim:       198232 kB
+KernelStack:       19580 kB
+PageTables:        48336 kB
+SecPageTables:         0 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6996016 kB
+Committed_AS:   17796752 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       38148 kB
+VmallocChunk:          0 kB
+Percpu:             8480 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+Unaccepted:            0 kB
+HugePages_Total:    1215
+HugePages_Free:     1215
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:         2488320 kB
+DirectMap4k:      195440 kB
+DirectMap2M:     8155136 kB
+DirectMap1G:     2097152 kB
+sudo cat /proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 8
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 8
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 8
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 8
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 4
+cpu cores	: 8
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 5
+cpu cores	: 8
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 6
+cpu cores	: 8
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 183
+model name	: Intel(R) Core(TM) i9-14900K
+stepping	: 1
+microcode	: 0x10f
+cpu MHz		: 3187.200
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 8
+core id		: 7
+cpu cores	: 8
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 31
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni arat vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities
+vmx flags	: vnmi preemption_timer posted_intr invvpid ept_x_only ept_ad ept_1gb flexpriority apicv tsc_offset vtpr mtf vapic ept vpid unrestricted_guest vapic_reg vid shadow_vmcs pml tsc_scaling
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs eibrs_pbrsb rfds bhi ibpb_no_ret
+bogomips	: 6374.40
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+sudo cat /etc/*release
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+sudo lspci -s 0000:00:03.0 -vv
+00:03.0 Non-Volatile memory controller: Red Hat, Inc. QEMU NVM Express Controller (rev 02) (prog-if 02 [NVM Express])
+	Subsystem: Red Hat, Inc. QEMU NVM Express Controller
+	Control: I/O+ Mem+ BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx-
+	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
+	Interrupt: pin A routed to IRQ 23
+	Region 0: Memory at 384000000000 (64-bit, non-prefetchable) [size=16K]
+	Capabilities: [40] MSI-X: Enable- Count=65 Masked-
+		Vector table: BAR=0 offset=00002000
+		PBA: BAR=0 offset=00003000
+	Capabilities: [80] Express (v2) Root Complex Integrated Endpoint, MSI 00
+		DevCap:	MaxPayload 128 bytes, PhantFunc 0
+			ExtTag- RBE+ FLReset+
+		DevCtl:	CorrErr- NonFatalErr- FatalErr- UnsupReq-
+			RlxdOrd- ExtTag- PhantFunc- AuxPwr- NoSnoop- FLReset-
+			MaxPayload 128 bytes, MaxReadReq 128 bytes
+		DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend-
+		DevCap2: Completion Timeout: Not Supported, TimeoutDis- NROPrPrP- LTR-
+			 10BitTagComp- 10BitTagReq- OBFF Not Supported, ExtFmt+ EETLPPrefix+, MaxEETLPPrefixes 4
+			 EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
+			 FRS-
+			 AtomicOpsCap: 32bit- 64bit- 128bitCAS-
+		DevCtl2: Completion Timeout: 50us to 50ms, TimeoutDis- LTR- 10BitTagReq- OBFF Disabled,
+			 AtomicOpsCtl: ReqEn-
+	Capabilities: [60] Power Management version 3
+		Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
+		Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
+	Kernel driver in use: uio_pci_generic
+	Kernel modules: nvme
+
+ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp6s18: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether bc:24:11:b6:22:e4 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.100.194/24 brd 192.168.100.255 scope global noprefixroute enp6s18
+       valid_lft forever preferred_lft forever
+    inet6 fe80::f0b2:7f77:e0ce:f977/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs             809176     5032    804144   1% /run
+/dev/sda2       31761232 19104824  11017448  64% /
+tmpfs            4045876    42208   4003668   2% /dev/shm
+tmpfs               5120        8      5112   1% /run/lock
+efivarfs             256      203        49  81% /sys/firmware/efi/efivars
+/dev/sda1        1098632     6284   1092348   1% /boot/efi
+tmpfs             809172      100    809072   1% /run/user/120
+tmpfs             809172      124    809048   1% /run/user/1000
+whoami
+jj
+groups
+jj adm cdrom sudo dip plugdev users lpadmin
+lspci
+00:00.0 Host bridge: Intel Corporation 82G33/G31/P35/P31 Express DRAM Controller
+00:01.0 VGA compatible controller: Red Hat, Inc. QXL paravirtual graphic card (rev 05)
+00:02.0 Non-Volatile memory controller: Red Hat, Inc. QEMU NVM Express Controller (rev 02)
+00:03.0 Non-Volatile memory controller: Red Hat, Inc. QEMU NVM Express Controller (rev 02)
+00:1a.0 USB controller: Intel Corporation 82801I (ICH9 Family) USB UHCI Controller #4 (rev 03)
+00:1a.1 USB controller: Intel Corporation 82801I (ICH9 Family) USB UHCI Controller #5 (rev 03)
+00:1a.2 USB controller: Intel Corporation 82801I (ICH9 Family) USB UHCI Controller #6 (rev 03)
+00:1a.7 USB controller: Intel Corporation 82801I (ICH9 Family) USB2 EHCI Controller #2 (rev 03)
+00:1b.0 Audio device: Intel Corporation 82801I (ICH9 Family) HD Audio Controller (rev 03)
+00:1c.0 PCI bridge: Red Hat, Inc. QEMU PCIe Root port
+00:1c.1 PCI bridge: Red Hat, Inc. QEMU PCIe Root port
+00:1c.2 PCI bridge: Red Hat, Inc. QEMU PCIe Root port
+00:1c.3 PCI bridge: Red Hat, Inc. QEMU PCIe Root port
+00:1d.0 USB controller: Intel Corporation 82801I (ICH9 Family) USB UHCI Controller #1 (rev 03)
+00:1d.1 USB controller: Intel Corporation 82801I (ICH9 Family) USB UHCI Controller #2 (rev 03)
+00:1d.2 USB controller: Intel Corporation 82801I (ICH9 Family) USB UHCI Controller #3 (rev 03)
+00:1d.7 USB controller: Intel Corporation 82801I (ICH9 Family) USB2 EHCI Controller #1 (rev 03)
+00:1e.0 PCI bridge: Intel Corporation 82801 PCI Bridge (rev 92)
+00:1f.0 ISA bridge: Intel Corporation 82801IB (ICH9) LPC Interface Controller (rev 02)
+00:1f.2 SATA controller: Intel Corporation 82801IR/IO/IH (ICH9R/DO/DH) 6 port SATA Controller [AHCI mode] (rev 02)
+00:1f.3 SMBus: Intel Corporation 82801I (ICH9 Family) SMBus Controller (rev 02)
+05:01.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
+05:02.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
+05:03.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
+05:04.0 PCI bridge: Red Hat, Inc. QEMU PCI-PCI bridge
+06:03.0 Unclassified device [00ff]: Red Hat, Inc. Virtio memory balloon
+06:09.0 Communication controller: Red Hat, Inc. Virtio console
+06:12.0 Ethernet controller: Red Hat, Inc. Virtio network device
+09:01.0 SCSI storage controller: Red Hat, Inc. Virtio SCSI
+date
+Wed May 14 08:28:59 AM EET 2025
+pwd
+/home/jj/.local/pynvme
+git status -sb
+fatal: not a git repository (or any of the parent directories): .git
+make[1]: [Makefile:89: info] Error 128 (ignored)
+git --no-pager log -1
+fatal: not a git repository (or any of the parent directories): .git
+make[1]: [Makefile:90: info] Error 128 (ignored)
+sudo python3 -B -m pytest driver_test.py::test_customizedTest 
+============================= test session starts ==============================
+platform linux -- Python 3.8.20, pytest-8.3.5, pluggy-1.5.0
+rootdir: /home/jj/.local/pynvme
+configfile: pytest.ini
+collected 1 item
+
+driver_test.py::test_customizedTest 
+-------------------------------- live log setup --------------------------------
+[2025-05-14 08:28:59.883] INFO script(60): setup random seed: 0xaa1b9aaa
+ERROR                                                                    [100%]
+------------------------------ live log teardown -------------------------------
+[2025-05-14 08:28:59.891] INFO script(62): test duration: 0.009 sec
+
+
+==================================== ERRORS ====================================
+____________________ ERROR at setup of test_customizedTest _____________________
+
+pciaddr = ''
+
+    @pytest.fixture(scope="function")
+    def pcie(pciaddr):
+>       ret = d.Pcie(pciaddr)
+
+conftest.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>   ???
+E   nvme.NvmeEnumerateError: fail to create the controller
+
+driver_wrap.pyx:562: NvmeEnumerateError
+---------------------------- Captured stderr setup -----------------------------
+[2025-05-14 08:28:59.884916] ERROR driver.c(893) probe_cb: Wrong address 0000:00:02.0
+[2025-05-14 08:28:59.885568] ERROR driver.c(893) probe_cb: Wrong address 0000:00:03.0
+[2025-05-14 08:28:59.885889] WARNING driver.c(1001) nvme_probe: not found device: , rc 0, cb_ctx.ctrlr (nil)
+------------------------------ Captured log setup ------------------------------
+INFO     root:conftest.py:60 setup random seed: 0xaa1b9aaa
+=========================== short test summary info ============================
+ERROR driver_test.py::test_customizedTest - nvme.NvmeEnumerateError: fail to ...
+=============================== 1 error in 0.14s ===============================
+make[1]: *** [Makefile:108: pytest] Error 1
+make[1]: Leaving directory '/home/jj/.local/pynvme'
